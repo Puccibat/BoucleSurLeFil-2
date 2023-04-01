@@ -9,9 +9,8 @@
 
 .sticky-header {
   position: fixed;
-  top: -200px; /* this value should be equal to the height of your header */
-  width: 100%;
-  transition: top 0.3s;
+  top: -200px;
+  transition: top 0.7s;
 }
 
 .sticky-header.active {

@@ -17,7 +17,7 @@ const Checkout = () => {
               <Link to="/checkout/shipping">Continuer en tant qu'invité</Link>
             </p>
           </div>
-          <div className="pl-4">
+          <div className="px-2">
             <h3>Se connecter:</h3>
             <div className="flex flex-wrap gap-4 pt-2">
               <input
@@ -30,15 +30,18 @@ const Checkout = () => {
                 type="password"
                 placeholder="Mot de passe"
               />
-              <button className="bg-black hover:bg-slate-800 focus:outline-none focus:ring-4 focus:ring-slate-200 transform active:scale-90 transition-transform text-white p-3 rounded">
+              <button className="bg-black hover:bg-slate-800 focus:outline-none focus:ring-4 focus:ring-slate-200 transform active:scale-90 transition-transform text-white p-2 rounded">
                 Connexion
               </button>
             </div>
             <p className="pt-2">
               Vous n'avez pas de compte ?{" "}
-              <span className="underline underline-offset-2 cursor-pointer hover:text-slate-500">
+              <Link
+                className="underline underline-offset-2 cursor-pointer hover:text-slate-500"
+                to="/signup"
+              >
                 Créer un compte
-              </span>
+              </Link>
             </p>
           </div>
         </div>

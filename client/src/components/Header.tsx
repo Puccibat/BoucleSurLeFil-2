@@ -21,7 +21,6 @@ const Header: React.FC<{ textColor: string }> = ({ textColor }) => {
       const offset = window.scrollY;
       if (offset > 200) {
         setIsSticky(true);
-        console.log("toto");
       } else {
         setIsSticky(false);
         setX(-120);
@@ -34,6 +33,8 @@ const Header: React.FC<{ textColor: string }> = ({ textColor }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  //
 
   return (
     <>
@@ -81,7 +82,7 @@ const Header: React.FC<{ textColor: string }> = ({ textColor }) => {
             <span className={`text-${textColor}`}>-</span>
             <Link
               className={`px-2 text-${textColor} after:content-[''] after:block after:w-0 after:h-1 after:bg-orange-300 after:transition-[width] after:delay-100 hover:after:w-full`}
-              to="/products"
+              to="/signin"
             >
               Se connecter
             </Link>
@@ -89,9 +90,9 @@ const Header: React.FC<{ textColor: string }> = ({ textColor }) => {
         </div>
       </nav>
       <nav
-        className={`hidden font-secondary md:flex lg:flex p-4 justify-between bg-white w-full ${
-          isSticky ? "sticky-header active" : "sticky-header"
-        }`}
+        className={`hidden font-secondary md:flex lg:flex p-4 justify-between bg-white w-full border z-10 
+        ${isSticky ? "sticky-header active" : "sticky-header"}
+        `}
       >
         <div className=" flex justify-between">
           <Link
@@ -136,7 +137,7 @@ const Header: React.FC<{ textColor: string }> = ({ textColor }) => {
             <span>-</span>
             <Link
               className="px-2 after:content-[''] after:block after:w-0 after:h-1 after:bg-orange-300 after:transition-[width] after:delay-100 hover:after:w-full"
-              to="/products"
+              to="/signin"
             >
               Se connecter
             </Link>

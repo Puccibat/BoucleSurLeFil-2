@@ -7,16 +7,6 @@ const Cart = () => {
   return (
     <>
       <Header textColor="black" />
-      {/* <section className=" pt-32 md:px-28 px-10 font-secondary">
-        <div className="grid grid-cols-3 gap-4 px-60">
-          <div className="text-center">Retirer</div>
-          <div className="text-center">Bijoux</div>
-          <div className="text-center">Qté</div>
-          <CartItem />
-          <CartItem />
-          <CartItem />
-        </div>
-      </section> */}
       <section className=" pt-32 px-10 font-secondary flex justify-center items-center flex-col">
         <table>
           <thead className="text-sm font-normal">
